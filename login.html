@@ -66,12 +66,14 @@
             <h2>Por favor, regístrese</h2>
           </div>
 
-          <form id="loginForm" action="index.html" method="get">
-            <input id="usuario" type="email" name="usuario" placeholder="mail@gmail.com" required>
+          <form id="loginForm">
+            <input id="usuario" type="email" name="usuario" placeholder="mail@gmail.com">
 
-            <input id="contrasena" type="password" name="contrasena" placeholder="contraseña" required>
+            <input id="contrasena" type="password" name="contrasena" placeholder="contraseña">
 
-            <input id="loginSubmit" type="submit" name="ingresar" value="Ingresar">
+            <button id="loginSubmit" onclick="submitForm(event)" name="ingresar" > Ingresar </button>
+
+            <p id="loginError"></p>
           </form>
 
         </div>

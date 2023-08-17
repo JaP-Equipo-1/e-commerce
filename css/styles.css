@@ -213,7 +213,7 @@ a.custom-card:hover {
   box-shadow: 0px 0px 5px 5px #d6d6d6;
 }
 
-#loginForm input{
+#loginForm input, #loginForm button{
   background-color: #f7ecdc;
   font-size: 1.25rem;
   border: 1px solid #ffa500;
@@ -237,7 +237,7 @@ a.custom-card:hover {
   color: #757575;
 }
 
-input#loginSubmit{
+button#loginSubmit{
   color: #fff;
   background-color: #ef9333;
 }
