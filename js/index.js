@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
+    var usuario = localStorage.getItem('usuario');
+    if (usuario === null){
+        window.location.href="login.html";
+    };
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
