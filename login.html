@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <!-- * INICIO AGREGADO * -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- * FIN AGREGADO * -->
   <style>
     body {
       background-color: rgb(248, 249, 250);
@@ -17,36 +20,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
 
-            <!-- * INICIO AGREGADO * -->
-
-            <a class="nav-link" href="login.html">Login</a>
-
-            <!-- * FIN AGREGADO * -->
-
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <main class="mt-5">
     <div class="container">
       <!-- <div class="alert alert-danger text-center" role="alert">
@@ -55,29 +29,36 @@
 
       <!-- * INICIO AGREGADO * -->
 
-      <div class="container" id="loginContenedorExt">
+      <div id="loginContenedor" class="container-sm shadow bg-white rounded text-center">
+        <img src="img/login.png" class="img-fluid p-3 mt-3">
 
-        <div id="loginContenedor">
+    <form class="was-validated p-3" id="loginForm">
 
-          <img src="img/login.png">
+      <h1 class="p-1">Bienvenido</h1>
+      <p class="text-muted">Por favor registrese</p>
 
-          <div id="loginEncabezado">
-            <h1>Bienvenido</h1>
-            <h2>Por favor, regístrese</h2>
-          </div>
+      <div class="mb-3 form-floating">
+        <input type="email" name="usuario" id="usuario" placeholder="nombre@ejemplo.com" required class="form-control">
+         <label for="inputEmail" class="form-label text-muted">Email</label>
+      </div>
 
-          <form id="loginForm">
-            <input id="usuario" type="email" name="usuario" placeholder="mail@gmail.com">
+      <div class="mb-3 form-floating">
+        <input type="password" name="contrasena" id="contrasena" placeholder="contraseña" required class="form-control">
 
-            <input id="contrasena" type="password" name="contrasena" placeholder="contraseña">
+        <label for="inputContrasena" class="form-label text-muted">Contraseña</label>
 
-            <button id="loginSubmit" onclick="submitForm(event)" name="ingresar" > Ingresar </button>
+        <p class="text-muted" onclick="mostrarPassword()">
+          <span>Mostrar contraseña <br>
+          <i class="fas fa-eye" id="show_eye"></i>
+          <i class="fas fa-eye-slash d-none" id="hide_eye"></i></span></p>
+      </div>
 
-            <p id="loginError"></p>
-          </form>
+        <button class="btn btn-primary mb-3" id="loginSubmit" onclick="submitForm(event)" name="ingresar" > Ingresar </button>
+        <p class="text-muted" id="loginError"></p>
+    </form>
+    </div>
 
-        </div>
-
+        
         <!-- * FIN AGREGADO * -->
 
 
